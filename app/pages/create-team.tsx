@@ -65,7 +65,7 @@ class CreateTeam extends React.Component<MyProps> {
         file,
         prefix,
         bucket,
-        acl: 'public-read',
+        acl: 'private',
       });
       await uploadFileUsingSignedPutRequest(file, responseFromApiServerForUpload.signedRequest, {
         'Cache-Control': 'max-age=2592000',

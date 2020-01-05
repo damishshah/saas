@@ -206,7 +206,7 @@ class YourSettings extends React.Component<MyProps, MyState> {
         file,
         prefix,
         bucket,
-        acl: 'public-read',
+        acl: 'private',
       });
 
       const resizedFile = await resizeImage(file, 128, 128);

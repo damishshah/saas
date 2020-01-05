@@ -24,7 +24,7 @@ async function signRequestForUpload({ fileName, fileType, prefix, bucket, user, 
   await checkPrefix(prefix, user);
 
   aws.config.update({
-    region: 'us-west-1',
+    region: 'us-east-1',
     accessKeyId: AMAZON_ACCESSKEYID,
     secretAccessKey: AMAZON_SECRETACCESSKEY,
   });
@@ -74,7 +74,7 @@ async function signRequestForUpload({ fileName, fileType, prefix, bucket, user, 
 
 function signRequestForLoad(path, bucket) {
   aws.config.update({
-    region: 'us-west-1',
+    region: 'us-east-1',
     accessKeyId: AMAZON_ACCESSKEYID,
     secretAccessKey: AMAZON_SECRETACCESSKEY,
   });
@@ -105,7 +105,7 @@ function signRequestForLoad(path, bucket) {
 
 function deleteFiles(bucket: string, files: string[]) {
   aws.config.update({
-    region: 'us-west-1',
+    region: 'us-east-1',
     accessKeyId: AMAZON_ACCESSKEYID,
     secretAccessKey: AMAZON_SECRETACCESSKEY,
   });

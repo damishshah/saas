@@ -100,7 +100,7 @@ class TeamSettings extends React.Component<MyProps, MyState> {
         file,
         prefix,
         bucket,
-        acl: 'public-read',
+        acl: 'private',
       });
 
       await uploadFileUsingSignedPutRequest(file, responseFromApiServerForUpload.signedRequest, {
